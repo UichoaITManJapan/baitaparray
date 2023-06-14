@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai1</title>
+</head>
+<body>
+    <!-- Bài 1: Khai báo mảng 1 chiều kiểu số, nhập 5 phần tử từ 
+    bàn phím,duyệt mảng và in ra các phần tử là số chẵn (push)
+        - Xóa phần tử ở cuối mảng
+        - Thêm 2 phần tử có giá trị là 1,2 ở đẩu mảng (unshift)
+        - Xóa phần tử đầu tiên của mảng (shift) -->
+        <script>
+            //khai bao mang 1 chieu 5 phan tu
+            let arrayNumber =[];
+            for( let i =0; i< 5; i++){
+                arrayNumber[i] = Number(prompt("nhap vao so thu" +(i+1)))
+                //in ra cac phan tu la so chan
+                if(arrayNumber[i] % 2 ==0){
+                    console.log(arrayNumber[i]);
+                }
+            }
+            // xoa phan tu cuoi mang
+            let elementDelete = arrayNumber.pop();
+            console.log("elementDelete -->", elementDelete);
+            console.log(arrayNumber);
+            //them 2 phan tu co gia tri 1,2 vao ddau mang
+            let arrLenght = arrayNumber.unshift(1,2);
+            console.log("arrLeght -->", arrLenght);
+            // xoa phan tu dau tien cua mang
+            let elementDeleteShift = arrayNumber.shift();
+            console.log("phan tu vua xoa la", elementDeleteShift);
+
+        </script>
+</body>
+</html>
